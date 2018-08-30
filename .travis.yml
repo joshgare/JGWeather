@@ -1,0 +1,6 @@
+language: swift
+os: osx
+osx_image: xcode9.4
+xcode_workspace: JGWeather.xcworkspace
+xcode_scheme: JGWeather
+xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
