@@ -5,6 +5,7 @@ target 'JGWeather' do
   use_frameworks!
 
   # Pods for JGWeather
+  pod 'Alamofire'
 
   target 'JGWeatherTests' do
     inherit! :search_paths
