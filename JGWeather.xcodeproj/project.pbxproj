@@ -10,6 +10,7 @@
 		52B39D2D21395F19003960C6 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 52B39D2C21395F19003960C6 /* forecast.json */; };
 		52B39D3021395FE3003960C6 /* JGForecastModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */; };
 		52B39D3321397CEF003960C6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D3221397CEF003960C6 /* APIClient.swift */; };
+		52B39D3621398472003960C6 /* JGWeatherIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D3521398472003960C6 /* JGWeatherIntegrationTests.swift */; };
 		52E5ABD22138601A00AFE0CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5ABD12138601A00AFE0CC /* AppDelegate.swift */; };
 		52E5ABD42138601A00AFE0CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5ABD32138601A00AFE0CC /* ViewController.swift */; };
 		52E5ABD72138601A00AFE0CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E5ABD52138601A00AFE0CC /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		52B39D2C21395F19003960C6 /* forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
 		52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGForecastModelTests.swift; sourceTree = "<group>"; };
 		52B39D3221397CEF003960C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		52B39D3521398472003960C6 /* JGWeatherIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGWeatherIntegrationTests.swift; sourceTree = "<group>"; };
 		52E5ABCE2138601A00AFE0CC /* JGWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JGWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E5ABD12138601A00AFE0CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E5ABD32138601A00AFE0CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		52B39D2921395E3E003960C6 /* Integration Tests */ = {
 			isa = PBXGroup;
 			children = (
+				52B39D3421398452003960C6 /* Cases */,
 			);
 			path = "Integration Tests";
 			sourceTree = "<group>";
@@ -116,6 +119,14 @@
 				52B39D3221397CEF003960C6 /* APIClient.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		52B39D3421398452003960C6 /* Cases */ = {
+			isa = PBXGroup;
+			children = (
+				52B39D3521398472003960C6 /* JGWeatherIntegrationTests.swift */,
+			);
+			path = Cases;
 			sourceTree = "<group>";
 		};
 		52E5ABC52138601A00AFE0CC = {
@@ -371,6 +382,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B39D3621398472003960C6 /* JGWeatherIntegrationTests.swift in Sources */,
 				52B39D3021395FE3003960C6 /* JGForecastModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
