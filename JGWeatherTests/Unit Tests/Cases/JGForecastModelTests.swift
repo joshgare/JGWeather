@@ -79,6 +79,7 @@ class JGForecastModelTests: XCTestCase {
     }
     
     func testJGMinutelyDatum() {
+        // Ensure static forecast data has loaded correctly
         guard let minutelyDatum = forecast?.minutely?.data?.first else {
             XCTFail()
             return
@@ -114,6 +115,7 @@ class JGForecastModelTests: XCTestCase {
     }
     
     func testJGDailyDatum() {
+        // Ensure static forecast data has loaded correctly
         guard let dailyDatum = forecast?.daily?.data?.first else {
             XCTFail()
             return

@@ -39,4 +39,25 @@ class JGWeatherIntegrationTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    func testRetrieveForecastForCurrentLocation() {
+        let expectation: XCTestExpectation = self.expectation(description: "Expected to load forecast data for the current location.")
+        
+        APIClient.shared.retrieveForecastForCurrentLocation { (success, forecast, error) in
+            expectation.fulfill()
+            guard let forecast = forecast else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertTrue(success)
+            XCTAssertNotNil(forecast.currently)
+            XCTAssertNotNil(forecast.minutely)
+            XCTAssertNotNil(forecast.hourly)
+            XCTAssertNotNil(forecast.daily)
+            XCTAssertNotNil(forecast.flags)
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
 }
