@@ -46,8 +46,8 @@ struct JGForecast: Codable {
 
 struct JGCurrently: Codable {
     let time: Int?
-    let summary: JGSummary?
-    let icon: JGIcon?
+    let summary: String?
+    let icon: String?
     let nearestStormDistance: Int?
     let nearestStormBearing: Int?
     let precipIntensity: Double?
@@ -64,7 +64,6 @@ struct JGCurrently: Codable {
     let uvIndex: Int?
     let visibility: Double?
     let ozone: Double?
-    let precipType: JGPrecipType?
     
     enum CodingKeys: String, CodingKey {
         case time = "time"
@@ -86,25 +85,7 @@ struct JGCurrently: Codable {
         case uvIndex = "uvIndex"
         case visibility = "visibility"
         case ozone = "ozone"
-        case precipType = "precipType"
     }
-}
-
-enum JGIcon: String, Codable {
-    case clearDay = "clear-day"
-    case clearNight = "clear-night"
-    case partlyCloudyDay = "partly-cloudy-day"
-    case partlyCloudyNight = "partly-cloudy-night"
-}
-
-enum JGPrecipType: String, Codable {
-    case rain = "rain"
-}
-
-enum JGSummary: String, Codable {
-    case clear = "Clear"
-    case mostlyCloudy = "Mostly Cloudy"
-    case partlyCloudy = "Partly Cloudy"
 }
 
 struct JGDaily: Codable {
