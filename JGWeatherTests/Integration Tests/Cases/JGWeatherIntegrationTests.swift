@@ -57,7 +57,7 @@ class JGWeatherIntegrationTests: XCTestCase {
             XCTAssertNotNil(forecast.flags)
         }
         
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 15, handler: nil)
     }
     
 }
