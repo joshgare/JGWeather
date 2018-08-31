@@ -186,14 +186,10 @@ struct JGDailyDatum: Codable {
 
 struct JGFlags: Codable {
     let sources: [String]?
-    let meteoalarmLicense: String?
-    let nearestStation: Double?
     let units: String?
     
     enum CodingKeys: String, CodingKey {
         case sources = "sources"
-        case meteoalarmLicense = "meteoalarm-license"
-        case nearestStation = "nearest-station"
         case units = "units"
     }
 }
