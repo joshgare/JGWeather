@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.7.3)
+  - INTULocationManager (4.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - INTULocationManager
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - INTULocationManager
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  INTULocationManager: 0ca5c76eacc029ba15938fc699520bc333ed6435
 
-PODFILE CHECKSUM: fa21fe05812022ced66da40a6abf6b1f4fd71498
+PODFILE CHECKSUM: e8f70407ecac9bf4872e0391a7784eec37c8f79c
 
 COCOAPODS: 1.5.3

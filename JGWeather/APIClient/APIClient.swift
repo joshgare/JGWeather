@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-import CoreLocation
+import INTULocationManager
 
 class APIClient {
     
@@ -30,9 +30,21 @@ class APIClient {
             }
         }
     }
+    
+    func retrieveForecastForCurrentLocation(completionHandler: @escaping (_ success: Bool, _ forecast: JGForecast?, _ error: Error?) -> Void) {
+        let locationManager: INTULocationManager = INTULocationManager.sharedInstance()
+        locationManager.requestLocation(withDesiredAccuracy: .city, timeout: 10.0, delayUntilAuthorized: true) { (currentLocation, achievedAccuracy, status) in
+            guard let currentLocation = currentLocation else {
+                completionHandler(false, nil, APIError.unableToLocateUser)
+                return
+            }
+            self.retrieveForecast(with: currentLocation, completionHandler: completionHandler)
+        }
+    }
 
 }
 
 enum APIError: Error {
     case unkownError
+    case unableToLocateUser
 }
