@@ -21,6 +21,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        styleController()
+        
         //Register UITableView XIBs
         layoutTableView.register(UINib(nibName: "JGMapTableViewCell", bundle: nil), forCellReuseIdentifier: "JGMapTableViewCell")
         layoutTableView.register(UINib(nibName: "JGCurrentlyTableViewCell", bundle: nil), forCellReuseIdentifier: "JGCurrentlyTableViewCell")
@@ -33,6 +35,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func styleController() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
     
     func retrieveForecastData() {
@@ -70,24 +76,28 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         switch indexPath.section {
         case 0:
             let cell: JGMapTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGMapTableViewCell") as! JGMapTableViewCell
+            cell.selectionStyle = .none
             return cell
         case 1:
             let cell: JGCurrentlyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGCurrentlyTableViewCell") as! JGCurrentlyTableViewCell
             if let currently = retrievedForecast?.currently {
                 cell.currentlyViewModel = JGCurrentlyViewModel(currently: currently)
             }
+            cell.selectionStyle = .none
             return cell
         case 2:
             let cell: JGHourlyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGHourlyTableViewCell") as! JGHourlyTableViewCell
             if let hourly = retrievedForecast?.hourly {
                 cell.hourlyViewModel = JGHourlyViewModel(hourly: hourly)
             }
+            cell.selectionStyle = .none
             return cell
         case 3:
             let cell: JGDailyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGDailyTableViewCell") as! JGDailyTableViewCell
             if let dailyDatum = retrievedForecast?.daily?.data?[safe: indexPath.row] {
                 cell.dailyDatumViewModel = JGDailyDatumViewModel(dailyDatum: dailyDatum)
             }
+            cell.selectionStyle = .none
             return cell
         default:
             return UITableViewCell()
