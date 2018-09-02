@@ -39,9 +39,13 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func styleController() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
+        let refreshBarButonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(retrieveForecastData))
+        navigationItem.rightBarButtonItem = refreshBarButonItem
+        navigationController?.navigationBar.tintColor = .white
     }
     
-    func retrieveForecastData() {
+    @objc func retrieveForecastData() {
         MBProgressHUD.showAdded(to: self.view, animated: true)
         APIClient.shared.retrieveForecastForCurrentLocation { (success, forecast, error) in
             MBProgressHUD.hide(for: self.view, animated: true)
