@@ -31,4 +31,15 @@ class JGCurrentlyViewModel {
         return icon
     }
     
+    var timeAsHourText: String {
+        guard let time = currently.time else {
+            return ""
+        }
+        let timeInterval: TimeInterval = TimeInterval(time)
+        let timeAsDate: Date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h a"
+        return dateFormatter.string(from: timeAsDate)
+    }
+    
 }
