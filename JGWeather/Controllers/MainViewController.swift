@@ -20,6 +20,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Register UITableView XIBs
+        layoutTableView.register(UINib(nibName: "JGMapTableViewCell", bundle: nil), forCellReuseIdentifier: "JGMapTableViewCell")
+        layoutTableView.register(UINib(nibName: "JGCurrentlyTableViewCell", bundle: nil), forCellReuseIdentifier: "JGCurrentlyTableViewCell")
+        layoutTableView.register(UINib(nibName: "JGHourlyTableViewCell", bundle: nil), forCellReuseIdentifier: "JGHourlyTableViewCell")
+        layoutTableView.register(UINib(nibName: "JGDailyTableViewCell", bundle: nil), forCellReuseIdentifier: "JGDailyTableViewCell")
 
         retrieveForecastData()
     }
@@ -41,12 +47,66 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return retrievedForecast == nil ? 0 : 4
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return 1
+        case 2:
+            return 1
+        case 3:
+            return retrievedForecast?.daily?.data?.count ?? 0
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch indexPath.section {
+        case 0:
+            let cell: JGMapTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGMapTableViewCell") as! JGMapTableViewCell
+            return cell
+        case 1:
+            let cell: JGCurrentlyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGCurrentlyTableViewCell") as! JGCurrentlyTableViewCell
+            if let currently = retrievedForecast?.currently {
+                cell.currentlyViewModel = JGCurrentlyViewModel(currently: currently)
+            }
+            return cell
+        case 2:
+            let cell: JGHourlyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGHourlyTableViewCell") as! JGHourlyTableViewCell
+            if let hourly = retrievedForecast?.hourly {
+                cell.hourlyViewModel = JGHourlyViewModel(hourly: hourly)
+            }
+            return cell
+        case 3:
+            let cell: JGDailyTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGDailyTableViewCell") as! JGDailyTableViewCell
+            if let dailyDatum = retrievedForecast?.daily?.data?[safe: indexPath.row] {
+                cell.dailyDatumViewModel = JGDailyDatumViewModel(dailyDatum: dailyDatum)
+            }
+            return cell
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            return 150.0
+        case 1:
+            return 60.0
+        case 2:
+            return 92.0
+        case 3:
+            return 52.0
+        default:
+            return 0
+        }
     }
     
 
