@@ -109,6 +109,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        switch indexPath.section {
+        case 1:
+            let infoViewController: InfoViewController = InfoViewController.instantiate()
+            infoViewController.title = NSLocalizedString("Info", comment: "")
+            if let currently = retrievedForecast?.currently {
+                infoViewController.currentlyViewModel = JGCurrentlyViewModel(currently: currently)
+            }
+            navigationController?.pushViewController(infoViewController, animated: true)
+        default:
+            return
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
