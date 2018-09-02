@@ -7,20 +7,38 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var layoutTableView: UITableView!
+    var retrievedForecast: JGForecast? {
+        didSet {
+            layoutTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        retrieveForecastData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func retrieveForecastData() {
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        APIClient.shared.retrieveForecastForCurrentLocation { (success, forecast, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            if let error = error {
+                print("[API Error]", error.localizedDescription)
+            } else if let forecast = forecast {
+                self.retrievedForecast = forecast
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
