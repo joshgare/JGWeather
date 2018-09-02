@@ -16,6 +16,11 @@ class JGDailyDatumViewModel {
         self.dailyDatum = dailyDatum
     }
     
+    /**
+     Converts a timestamp to a day of the week.
+     
+     - Returns: The day of the week as a String.
+     */
     var timeAsDayText: String {
         guard let time = dailyDatum.time else {
             return ""
@@ -27,6 +32,11 @@ class JGDailyDatumViewModel {
         return dateFormatter.string(from: timeAsDate)
     }
     
+    /**
+     Converts the temperarture high from fahrenheit to celsius.
+     
+     - Returns: The temperature high in celsisus as a String.
+     */
     var temperatureHighText: String {
         guard let temperatureHigh = dailyDatum.temperatureHigh else {
             return ""
@@ -35,6 +45,11 @@ class JGDailyDatumViewModel {
         return "\(Int(celsiusDouble.rounded()))°"
     }
     
+    /**
+     Converts the temperarture low from fahrenheit to celsius.
+     
+     - Returns: The temperature low in celsisus as a String.
+     */
     var temperatureLowText: String {
         guard let temperatureLow = dailyDatum.temperatureLow else {
             return ""
@@ -43,6 +58,9 @@ class JGDailyDatumViewModel {
         return "\(Int(celsiusDouble.rounded()))°"
     }
     
+    /**
+     - Returns: The icon type as a String.
+     */
     var iconText: String {
         guard let icon = dailyDatum.icon else {
             return ""
@@ -50,6 +68,11 @@ class JGDailyDatumViewModel {
         return icon
     }
     
+    /**
+     Converts a decimal probability of the precipitation likelihood to a percentage.
+     
+     - Returns: The probability of precipitation in percentage form as a String.
+     */
     var precipProbabilityText: String {
         guard let precipProbability = dailyDatum.precipProbability else {
             return ""

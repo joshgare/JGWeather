@@ -16,6 +16,11 @@ class JGHourlyViewModel {
         self.hourly = hourly
     }
     
+    /**
+     Ensures there is only a maximum of 24 data points available.
+     
+     - Returns: An Array with a maximum of 24 JGCurrently objects.
+     */
     var hourlyDataArray: [JGCurrently] {
         guard let hourlyDataArray = hourly.data else {
             return []
