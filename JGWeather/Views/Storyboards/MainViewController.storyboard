@@ -40,10 +40,29 @@
                     <view key="view" contentMode="scaleToFill" id="IEX-XW-DQk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Oa-KV9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="V3z-q8-kgp" id="TUX-PU-fS7"/>
+                                    <outlet property="delegate" destination="V3z-q8-kgp" id="e67-Hl-Yyp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V42-dY-oRe" firstAttribute="bottom" secondItem="fg8-Oa-KV9" secondAttribute="bottom" id="Uge-un-PBF"/>
+                            <constraint firstItem="fg8-Oa-KV9" firstAttribute="leading" secondItem="V42-dY-oRe" secondAttribute="leading" id="Vqh-o0-QV3"/>
+                            <constraint firstItem="V42-dY-oRe" firstAttribute="trailing" secondItem="fg8-Oa-KV9" secondAttribute="trailing" id="geQ-IW-mA9"/>
+                            <constraint firstItem="fg8-Oa-KV9" firstAttribute="top" secondItem="V42-dY-oRe" secondAttribute="top" id="ohv-wc-ar1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V42-dY-oRe"/>
                     </view>
                     <navigationItem key="navigationItem" title="JGWeather" id="cCO-ZG-gLc"/>
+                    <connections>
+                        <outlet property="layoutTableView" destination="fg8-Oa-KV9" id="V61-lW-Wz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R11-jL-dod" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
