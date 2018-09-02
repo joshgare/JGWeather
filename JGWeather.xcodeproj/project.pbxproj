@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5228AEB0213C438C0065D6E3 /* JGCurrentlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5228AEA6213C438B0065D6E3 /* JGCurrentlyTableViewCell.xib */; };
+		5228AEB1213C438C0065D6E3 /* JGDailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEA7213C438B0065D6E3 /* JGDailyTableViewCell.swift */; };
+		5228AEB2213C438C0065D6E3 /* JGHourlyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5228AEA8213C438B0065D6E3 /* JGHourlyCollectionViewCell.xib */; };
+		5228AEB3213C438C0065D6E3 /* JGHourlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEA9213C438C0065D6E3 /* JGHourlyTableViewCell.swift */; };
+		5228AEB4213C438C0065D6E3 /* JGMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEAA213C438C0065D6E3 /* JGMapTableViewCell.swift */; };
+		5228AEB5213C438C0065D6E3 /* JGMapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5228AEAB213C438C0065D6E3 /* JGMapTableViewCell.xib */; };
+		5228AEB6213C438C0065D6E3 /* JGHourlyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5228AEAC213C438C0065D6E3 /* JGHourlyTableViewCell.xib */; };
+		5228AEB7213C438C0065D6E3 /* JGHourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEAD213C438C0065D6E3 /* JGHourlyCollectionViewCell.swift */; };
+		5228AEB8213C438C0065D6E3 /* JGCurrentlyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEAE213C438C0065D6E3 /* JGCurrentlyTableViewCell.swift */; };
+		5228AEB9213C438C0065D6E3 /* JGDailyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5228AEAF213C438C0065D6E3 /* JGDailyTableViewCell.xib */; };
+		5228AEBE213C47530065D6E3 /* JGCurrentlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEBD213C47530065D6E3 /* JGCurrentlyViewModel.swift */; };
+		5228AEC0213C47640065D6E3 /* JGHourlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEBF213C47640065D6E3 /* JGHourlyViewModel.swift */; };
+		5228AEC2213C477D0065D6E3 /* JGDailyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEC1213C477D0065D6E3 /* JGDailyViewModel.swift */; };
 		52B39D2D21395F19003960C6 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 52B39D2C21395F19003960C6 /* forecast.json */; };
 		52B39D3021395FE3003960C6 /* JGForecastModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */; };
 		52B39D3321397CEF003960C6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D3221397CEF003960C6 /* APIClient.swift */; };
@@ -40,6 +53,19 @@
 		0FDA06C9AAFD508116957360 /* Pods-JGWeatherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGWeatherTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JGWeatherTests/Pods-JGWeatherTests.release.xcconfig"; sourceTree = "<group>"; };
 		1C620FF389C7ED8DF6FE602A /* Pods-JGWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-JGWeather/Pods-JGWeather.release.xcconfig"; sourceTree = "<group>"; };
 		40042FAABD9A8CC3054F6AF1 /* Pods_JGWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5228AEA6213C438B0065D6E3 /* JGCurrentlyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGCurrentlyTableViewCell.xib; sourceTree = "<group>"; };
+		5228AEA7213C438B0065D6E3 /* JGDailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGDailyTableViewCell.swift; sourceTree = "<group>"; };
+		5228AEA8213C438B0065D6E3 /* JGHourlyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGHourlyCollectionViewCell.xib; sourceTree = "<group>"; };
+		5228AEA9213C438C0065D6E3 /* JGHourlyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGHourlyTableViewCell.swift; sourceTree = "<group>"; };
+		5228AEAA213C438C0065D6E3 /* JGMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGMapTableViewCell.swift; sourceTree = "<group>"; };
+		5228AEAB213C438C0065D6E3 /* JGMapTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGMapTableViewCell.xib; sourceTree = "<group>"; };
+		5228AEAC213C438C0065D6E3 /* JGHourlyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGHourlyTableViewCell.xib; sourceTree = "<group>"; };
+		5228AEAD213C438C0065D6E3 /* JGHourlyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGHourlyCollectionViewCell.swift; sourceTree = "<group>"; };
+		5228AEAE213C438C0065D6E3 /* JGCurrentlyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGCurrentlyTableViewCell.swift; sourceTree = "<group>"; };
+		5228AEAF213C438C0065D6E3 /* JGDailyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JGDailyTableViewCell.xib; sourceTree = "<group>"; };
+		5228AEBD213C47530065D6E3 /* JGCurrentlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGCurrentlyViewModel.swift; sourceTree = "<group>"; };
+		5228AEBF213C47640065D6E3 /* JGHourlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGHourlyViewModel.swift; sourceTree = "<group>"; };
+		5228AEC1213C477D0065D6E3 /* JGDailyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGDailyViewModel.swift; sourceTree = "<group>"; };
 		52B39D2C21395F19003960C6 /* forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
 		52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGForecastModelTests.swift; sourceTree = "<group>"; };
 		52B39D3221397CEF003960C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -80,6 +106,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5228AEBA213C439C0065D6E3 /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5228AEAA213C438C0065D6E3 /* JGMapTableViewCell.swift */,
+				5228AEAB213C438C0065D6E3 /* JGMapTableViewCell.xib */,
+				5228AEAE213C438C0065D6E3 /* JGCurrentlyTableViewCell.swift */,
+				5228AEA6213C438B0065D6E3 /* JGCurrentlyTableViewCell.xib */,
+				5228AEA9213C438C0065D6E3 /* JGHourlyTableViewCell.swift */,
+				5228AEAC213C438C0065D6E3 /* JGHourlyTableViewCell.xib */,
+				5228AEA7213C438B0065D6E3 /* JGDailyTableViewCell.swift */,
+				5228AEAF213C438C0065D6E3 /* JGDailyTableViewCell.xib */,
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
+		5228AEBB213C44AA0065D6E3 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5228AEAD213C438C0065D6E3 /* JGHourlyCollectionViewCell.swift */,
+				5228AEA8213C438B0065D6E3 /* JGHourlyCollectionViewCell.xib */,
+			);
+			path = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		5228AEBC213C47360065D6E3 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5228AEBD213C47530065D6E3 /* JGCurrentlyViewModel.swift */,
+				5228AEBF213C47640065D6E3 /* JGHourlyViewModel.swift */,
+				5228AEC1213C477D0065D6E3 /* JGDailyViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		52B39D2821395E36003960C6 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +218,8 @@
 		52B39D3A21399D5F003960C6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5228AEBA213C439C0065D6E3 /* UITableViewCells */,
+				5228AEBB213C44AA0065D6E3 /* UICollectionViewCells */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -187,6 +249,7 @@
 			children = (
 				52B39D3121397CCD003960C6 /* APIClient */,
 				52FF6DE52138872A00C32019 /* Models */,
+				5228AEBC213C47360065D6E3 /* View Models */,
 				52B39D3721399D22003960C6 /* Controllers */,
 				52B39D3821399D3A003960C6 /* Views */,
 				52E5ABD12138601A00AFE0CC /* AppDelegate.swift */,
@@ -322,12 +385,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5228AEB0213C438C0065D6E3 /* JGCurrentlyTableViewCell.xib in Resources */,
 				52EB0FDB21399EC300246C2B /* MainViewController.storyboard in Resources */,
 				52FF6DE4213867B400C32019 /* Podfile in Resources */,
 				52E5ABD92138601B00AFE0CC /* Assets.xcassets in Resources */,
 				52EB0FDF21399F8900246C2B /* LaunchScreen.storyboard in Resources */,
 				52FF6DE3213867B400C32019 /* README.md in Resources */,
+				5228AEB6213C438C0065D6E3 /* JGHourlyTableViewCell.xib in Resources */,
 				52FF6DE2213867B400C32019 /* .travis.yml in Resources */,
+				5228AEB9213C438C0065D6E3 /* JGDailyTableViewCell.xib in Resources */,
+				5228AEB5213C438C0065D6E3 /* JGMapTableViewCell.xib in Resources */,
+				5228AEB2213C438C0065D6E3 /* JGHourlyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,8 +474,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E5ABD22138601A00AFE0CC /* AppDelegate.swift in Sources */,
+				5228AEB1213C438C0065D6E3 /* JGDailyTableViewCell.swift in Sources */,
 				52FF6DE72138873F00C32019 /* JGForecast.swift in Sources */,
+				5228AEB7213C438C0065D6E3 /* JGHourlyCollectionViewCell.swift in Sources */,
+				5228AEC0213C47640065D6E3 /* JGHourlyViewModel.swift in Sources */,
+				5228AEC2213C477D0065D6E3 /* JGDailyViewModel.swift in Sources */,
+				5228AEB4213C438C0065D6E3 /* JGMapTableViewCell.swift in Sources */,
 				52B39D3321397CEF003960C6 /* APIClient.swift in Sources */,
+				5228AEB8213C438C0065D6E3 /* JGCurrentlyTableViewCell.swift in Sources */,
+				5228AEB3213C438C0065D6E3 /* JGHourlyTableViewCell.swift in Sources */,
+				5228AEBE213C47530065D6E3 /* JGCurrentlyViewModel.swift in Sources */,
 				52EB0FDD21399ED000246C2B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
