@@ -7,6 +7,7 @@ target 'JGWeather' do
   # Pods for JGWeather
   pod 'Alamofire'
   pod 'INTULocationManager'
+  pod 'MBProgressHUD'
 
   target 'JGWeatherTests' do
     inherit! :search_paths
