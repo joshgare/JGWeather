@@ -42,4 +42,39 @@ class JGCurrentlyViewModel {
         return dateFormatter.string(from: timeAsDate)
     }
     
+    var summaryText: String {
+        guard let summary = currently.summary else {
+            return ""
+        }
+        return summary
+    }
+    
+    var precipProbabilityText: String {
+        guard let precipProbability = currently.precipProbability else {
+            return ""
+        }
+        return "\(Int(precipProbability * 100))%"
+    }
+    
+    var windspeedText: String {
+        guard let windspeed = currently.windSpeed else {
+            return ""
+        }
+        return "\(windspeed)mph"
+    }
+    
+    public var cloudCoverText: String {
+        guard let cloudCover = currently.cloudCover else {
+            return ""
+        }
+        return "\(Int(cloudCover * 100))%"
+    }
+    
+    public var humidityText: String {
+        guard let humidity = currently.humidity else {
+            return ""
+        }
+        return "\(Int(humidity * 100))%"
+    }
+    
 }
