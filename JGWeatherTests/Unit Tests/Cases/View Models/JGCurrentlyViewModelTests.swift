@@ -36,6 +36,11 @@ class JGCurrentlyViewModelTests: XCTestCase {
         XCTAssertEqual(currentlyViewModel.temperatureText, "9°")
         XCTAssertEqual(currentlyViewModel.iconText, "clear-night")
         XCTAssertEqual(currentlyViewModel.timeAsHourText, "11 AM")
+        XCTAssertEqual(currentlyViewModel.summaryText, "Clear")
+        XCTAssertEqual(currentlyViewModel.precipProbabilityText, "0%")
+        XCTAssertEqual(currentlyViewModel.windspeedText, "2.95mph")
+        XCTAssertEqual(currentlyViewModel.cloudCoverText, "6%")
+        XCTAssertEqual(currentlyViewModel.humidityText, "60%")
     }
     
 }
