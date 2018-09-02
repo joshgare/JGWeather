@@ -20,6 +20,7 @@
 		5228AEBE213C47530065D6E3 /* JGCurrentlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEBD213C47530065D6E3 /* JGCurrentlyViewModel.swift */; };
 		5228AEC0213C47640065D6E3 /* JGHourlyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEBF213C47640065D6E3 /* JGHourlyViewModel.swift */; };
 		5228AEC2213C477D0065D6E3 /* JGDailyDatumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEC1213C477D0065D6E3 /* JGDailyDatumViewModel.swift */; };
+		5228AEC4213C59330065D6E3 /* JGCurrentlyViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5228AEC3213C59330065D6E3 /* JGCurrentlyViewModelTests.swift */; };
 		52B39D2D21395F19003960C6 /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = 52B39D2C21395F19003960C6 /* forecast.json */; };
 		52B39D3021395FE3003960C6 /* JGForecastModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */; };
 		52B39D3321397CEF003960C6 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B39D3221397CEF003960C6 /* APIClient.swift */; };
@@ -66,6 +67,7 @@
 		5228AEBD213C47530065D6E3 /* JGCurrentlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGCurrentlyViewModel.swift; sourceTree = "<group>"; };
 		5228AEBF213C47640065D6E3 /* JGHourlyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGHourlyViewModel.swift; sourceTree = "<group>"; };
 		5228AEC1213C477D0065D6E3 /* JGDailyDatumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGDailyDatumViewModel.swift; sourceTree = "<group>"; };
+		5228AEC3213C59330065D6E3 /* JGCurrentlyViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGCurrentlyViewModelTests.swift; sourceTree = "<group>"; };
 		52B39D2C21395F19003960C6 /* forecast.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
 		52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JGForecastModelTests.swift; sourceTree = "<group>"; };
 		52B39D3221397CEF003960C6 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				52B39D2F21395FE3003960C6 /* JGForecastModelTests.swift */,
+				5228AEC3213C59330065D6E3 /* JGCurrentlyViewModelTests.swift */,
 			);
 			path = Cases;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			files = (
 				52B39D3621398472003960C6 /* JGWeatherIntegrationTests.swift in Sources */,
 				52B39D3021395FE3003960C6 /* JGForecastModelTests.swift in Sources */,
+				5228AEC4213C59330065D6E3 /* JGCurrentlyViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
