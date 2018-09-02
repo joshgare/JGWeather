@@ -24,6 +24,7 @@ class JGHourlyCollectionViewCell: UICollectionViewCell {
     }
     
     func updateView() {
+        // The weather data is set before the view loads, once the view has loaded we must display the data
         guard let currentlyViewModel = currentlyViewModel else { return }
         hourLabel.text = currentlyViewModel.timeAsHourText
         temperatureLabel.text = currentlyViewModel.temperatureText

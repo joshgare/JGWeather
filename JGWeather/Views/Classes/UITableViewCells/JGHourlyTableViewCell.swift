@@ -28,6 +28,7 @@ class JGHourlyTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollec
     }
     
     func updateView() {
+        // The weather data is set before the view loads, once the view has loaded we must display the data
         guard let hourlyViewModel = hourlyViewModel else { return }
         hourlyDataArray = hourlyViewModel.hourlyDataArray
         hourlyCollectionView.reloadData()

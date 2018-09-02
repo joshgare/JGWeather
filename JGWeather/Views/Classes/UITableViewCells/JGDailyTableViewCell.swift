@@ -30,6 +30,7 @@ class JGDailyTableViewCell: UITableViewCell {
     }
     
     func updateView() {
+        // The weather data is set before the view loads, once the view has loaded we must display the data
         guard let dailyDatumViewModel = dailyDatumViewModel else { return }
         dayLabel.text = dailyDatumViewModel.timeAsDayText
         highTemperatureLabel.text = dailyDatumViewModel.temperatureHighText

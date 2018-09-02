@@ -38,6 +38,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func styleController() {
+        // Styles the view controller
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
         
         let refreshBarButonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(retrieveForecastData))
@@ -46,10 +47,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func retrieveForecastData() {
+        // Retrieves data from Dark Sky and readies for presentation
         MBProgressHUD.showAdded(to: self.view, animated: true)
         APIClient.shared.retrieveForecastForCurrentLocation { (success, forecast, error) in
             MBProgressHUD.hide(for: self.view, animated: true)
             if let error = error {
+                // TODO: Handle the error either by informing the user or falling back to a defauly location (most likely cause will be GPS errors due to permissions)
                 print("[API Error]", error.localizedDescription)
             } else if let forecast = forecast {
                 self.retrievedForecast = forecast
@@ -77,6 +80,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // For each cell we must pass on the correct View Model so that our data can be displayed to the user
         switch indexPath.section {
         case 0:
             let cell: JGMapTableViewCell = tableView.dequeueReusableCell(withIdentifier: "JGMapTableViewCell") as! JGMapTableViewCell
@@ -109,6 +113,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Each type of row has it's own specific height
         switch indexPath.section {
         case 0:
             return 150.0
@@ -127,6 +132,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.deselectRow(at: indexPath, animated: false)
         switch indexPath.section {
         case 1:
+            // Display additional weather information on it's own UIViewController pushed onto the UINavigationController
             let infoViewController: InfoViewController = InfoViewController.instantiate()
             infoViewController.title = NSLocalizedString("Info", comment: "")
             if let currently = retrievedForecast?.currently {

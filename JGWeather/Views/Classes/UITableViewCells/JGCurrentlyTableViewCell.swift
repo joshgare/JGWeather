@@ -27,6 +27,7 @@ class JGCurrentlyTableViewCell: UITableViewCell {
     }
     
     func updateView() {
+        // The weather data is set before the view loads, once the view has loaded we must display the data
         guard let currentlyViewModel = currentlyViewModel else { return }
         currentTemperatureLabel.text = currentlyViewModel.temperatureText
         iconImageView.image = UIImage(named: currentlyViewModel.iconText)

@@ -39,6 +39,7 @@ class InfoViewController: UIViewController {
     }
     
     func updateView() {
+        // The current weather data is set before the view loads, once the view has loaded we must display the data via the UILabels
         guard let currentlyViewModel = currentlyViewModel else { return }
         summaryLabel.text = currentlyViewModel.summaryText
         precipitationLabel.text = currentlyViewModel.precipProbabilityText
