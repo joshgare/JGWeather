@@ -33,7 +33,7 @@
                     <view key="view" contentMode="scaleToFill" id="IEX-XW-DQk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="V42-dY-oRe"/>
                     </view>
                     <navigationItem key="navigationItem" title="JGWeather" id="cCO-ZG-gLc"/>
